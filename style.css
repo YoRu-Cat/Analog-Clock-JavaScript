@@ -134,5 +134,5 @@ body {
     /* Half  of parent height*/
     height: calc(240px + 70px);
     background: white;
-    box-shadow: none;
+    box-shadow: 0 0 3px #0ef;
 }
