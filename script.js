@@ -15,3 +15,15 @@ so formula for hours is (hours * 30 + minutes / 2)
 //call getCurrentTime function on page load
 
 //call getCurrentTime to set clock hands every second
+
+const numberHours = document.querySelector('.number-hours');
+const numberElement = [];
+
+//Create number hours
+
+for (let i = 1;i <= 12;i++) {
+  numberElement.push(
+    `<span style="--index:${i}"><p>${i}</p></span>`
+  );
+}
+numberHours.insertAdjacentHTML("afterbegin",numberElement.join(""));
