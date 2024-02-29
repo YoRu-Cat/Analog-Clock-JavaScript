@@ -17,13 +17,22 @@ so formula for hours is (hours * 30 + minutes / 2)
 //call getCurrentTime to set clock hands every second
 
 const numberHours = document.querySelector('.number-hours');
+const barSeconds = document.querySelector('.bar-seconds');
 const numberElement = [];
-
+const barElement = [];
 //Create number hours
 
-for (let i = 1;i <= 12;i++) {
+for (let i = 1; i <= 12; i++) {
   numberElement.push(
     `<span style="--index:${i}"><p>${i}</p></span>`
   );
 }
 numberHours.insertAdjacentHTML("afterbegin",numberElement.join(""));
+
+// Create bar seconds
+for (let i = 1; i <= 60; i++) {
+  barElement.push(
+    `<span style="--index:${i}"><p></p></span>`
+  );
+}
+barSeconds.insertAdjacentHTML("afterbegin",barElement.join(""));
